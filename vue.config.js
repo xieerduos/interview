@@ -5,7 +5,7 @@ const path = require('path');
 console.log('process.env.ENV:', process.env.ENV);
 module.exports = {
     publicPath: './', // 跟域上下文目录
-    outputDir: process.env.ENV === 'qa' ? 'qa' : 'rd', // 构建输出目录
+    outputDir: process.env.ENV, // 构建输出目录
     assetsDir: 'assets', // 静态资源目录（js, css, img, fonts）
     lintOnSave: true, // 是否开启eslint保存检测，有效值 true | false | 'error'
     runtimeCompiler: true, // 运行时版本是否需要编译
